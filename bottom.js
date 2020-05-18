@@ -168,23 +168,4 @@ var whale=function(){"use strict";function e(t,n){return e.addElements(t,n)}func
 function startAnimating(e){fpsInterval=500/e,then=Date.now(),startTime=then,animate()}function animate(){requestAnimationFrame(animate),now=Date.now(),elapsed=now-then,elapsed>fpsInterval&&!stop&&(then=now-elapsed%fpsInterval,lorySlider.next())}function resetTimer(){now=Date.now(),elapsed=now-then,then=now-elapsed%fpsInterval}var slidesToScroll=4,slider=document.querySelector(".js_multislides"),stop=!1,frameCount=0,fps,fpsInterval,startTime,now,then,elapsed,lorySlider=lory(slider,{infinite:0,rewind:!0,enableMouseEvents:!0});startAnimating(.2),slider.addEventListener("mouseover",function(){stop=!0}),slider.addEventListener("mouseout",function(){resetTimer(),stop=!1});
 $("#themecheck").on("change",function(){0==$("#themecheck").prop("checked")?(localStorage.setItem("theme","dark"),$("body").removeClass("light"),$("body").addClass("dark")):(localStorage.setItem("theme","light"),$("body").removeClass("dark"),$("body").addClass("light"))});$(".menu-button").click(function(){$("#navi").toggleClass("mobileonly");});function showChatango(){$('.chatangobox').attr('src',$('.chatangobox').data('src'));$('.butchat').hide();$('.chatangobox').height(350);$('.chatango').css('margin-bottom','20px')}
 $(".entry-title a, .recent-post-title span, ul.lp li a").each(function(e,t){const i=t.innerText.replace(" Subtitle Indonesia","");t.innerText=i}),
-$(".score").each(function(e,t){const i=t.innerText.replace("XXXXXXzzz","");t.innerText=i});
-$(document).ready(function () {
-    $('#PopularPosts1 ul li:first-child .item-thumbnail img').each(function () {
-        $(this).attr('src', $(this).attr('src').replace('w72-h72-p-k-no-nu', 'w347-h140-c'))
-    });
-    $("#PopularPosts1 ul li:nth-child(1n+2)").each(function () {
-        var c = $(this),
-            b = c.find(".item-title a"),
-            a = b.attr("href");
-        $.ajax({
-            url: a,
-            type: "get",
-            success: function (f) {
-                var d = $(f).find(".published").text();
-                b.parent().after('<div class="item-meta"><span class="item-date">' + d + '</span></div>")
-            }
-        })
-    });
-});
-     
+$(".score").each(function(e,t){const i=t.innerText.replace("XXXXXXzzz","");t.innerText=i})
