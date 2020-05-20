@@ -122,7 +122,7 @@ function auto_safeconvert() {
     /*TAMBAH DISINI LINK POSTINGANNYA*/
     
     var daftarPostingan = [
-      "#",
+      "https://dimensiotaku.blogspot.com/p/lewat-kuy.html",
     ];
     /* Jika ingin menambah postingan, copas saja */
 
